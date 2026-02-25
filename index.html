@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="FirstGreen digital banking platform for personal, business, lending, and wealth services." />
+    <meta name="theme-color" content="#0A192F" />
+    <title>FirstGreen | Banking That Moves With Your Ambition</title>
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header" id="siteHeader">
+      <div class="container nav-wrap">
+        <a href="#" class="logo" aria-label="FirstGreen home">
+          <img src="assets/logo-fg.svg" alt="FirstGreen FG coin logo" />
+          <span>FirstGreen</span>
+        </a>
+        <nav class="desktop-nav" aria-label="Primary navigation">
+          <details><summary>Personal Banking</summary><div class="dropdown"><a href="#services">Checking</a><a href="#services">Savings</a><a href="#rates">CDs</a><a href="#services">Money Market</a></div></details>
+          <details><summary>Business Solutions</summary><div class="dropdown"><a href="#services">Commercial Banking</a><a href="#services">Treasury Management</a><a href="#services">Merchant Services</a></div></details>
+          <details><summary>Lending</summary><div class="dropdown"><a href="#services">Mortgages</a><a href="#services">Personal Loans</a><a href="#services">Auto Loans</a><a href="#services">Business Credit</a></div></details>
+          <details><summary>Wealth Management</summary><div class="dropdown"><a href="#services">Investments</a><a href="#services">Retirement Planning</a><a href="#services">Trust Services</a></div></details>
+          <details><summary>Resources</summary><div class="dropdown"><a href="#education">Financial Education</a><a href="#education">Calculators</a><a href="#rates">Market Insights</a><a href="#faq">FAQ</a></div></details>
+        </nav>
+        <div class="utility-nav">
+          <button class="icon-btn" id="searchToggle" aria-label="Open search">⌕</button>
+          <button class="icon-btn" id="locationBtn" aria-label="Find location">⌖</button>
+          <select id="languageSelect" aria-label="Language selector"><option>EN</option><option>ES</option><option>ZH</option></select>
+          <button class="btn btn-outline">Client Login</button>
+          <button class="btn btn-gold" id="openAccountBtn">Open Account</button>
+          <button class="mobile-toggle" id="mobileToggle" aria-expanded="false" aria-controls="mobileNav">☰</button>
+        </div>
+      </div>
+      <div id="mobileNav" class="mobile-nav" hidden>
+        <a href="#services">Personal Banking</a><a href="#services">Business Solutions</a><a href="#services">Lending</a><a href="#services">Wealth</a><a href="#education">Resources</a>
+      </div>
+    </header>
+
+    <div class="search-overlay" id="searchOverlay" hidden>
+      <button id="closeSearch" class="icon-btn" aria-label="Close search">✕</button>
+      <input type="search" placeholder="Search services, rates, help..." aria-label="Search" />
+      <ul><li>Mortgage pre-qualify</li><li>High-yield savings</li><li>Lost card support</li></ul>
+    </div>
+
+    <main id="main">
+      <section class="hero">
+        <div class="hero-overlay"></div>
+        <video class="hero-video" autoplay muted loop playsinline poster="https://images.unsplash.com/photo-1556740749-887f6717d7e4?q=80&w=1200&auto=format&fit=crop"></video>
+        <div class="container hero-content">
+          <p class="eyebrow">Member FDIC | Equal Housing Lender</p>
+          <h1>Banking That Moves With Your Ambition</h1>
+          <p>Experience personalized financial solutions designed for your unique journey—seamlessly blending human expertise with cutting-edge technology.</p>
+          <div class="hero-cta"><button class="btn btn-gold">Start Your Journey</button><a class="btn btn-outline" href="#services">Explore Solutions</a></div>
+          <div class="trust-row"><span>Norton Secured</span><span>BBB A+ Rating</span><span>256-bit SSL</span><strong id="memberCount">Join 500,000+ members nationwide</strong></div>
+        </div>
+        <aside class="quick-access container">
+          <div><p>Routing Number</p><button id="copyRouting" class="btn-link">011000138</button></div>
+          <div><p>Branch Hours</p><button id="toggleHours" class="btn-link">Open until 6 PM</button></div>
+          <div><p>Live Chat</p><button class="btn-link">● Online now</button></div>
+          <div><p>Callback</p><button id="callbackBtn" class="btn-link">Request Call</button></div>
+        </aside>
+      </section>
+
+      <section class="section" id="services">
+        <div class="container">
+          <h2>How Can We Help You Today?</h2>
+          <label for="goalInput">Tell us your goal</label>
+          <input id="goalInput" placeholder="e.g. I want to buy a house" />
+          <p id="recommendation">Type your goal for intelligent recommendations.</p>
+          <div class="card-grid" id="serviceGrid"></div>
+        </div>
+      </section>
+
+      <section class="section alt" id="dashboard">
+        <div class="container">
+          <h2>Try Our Digital Banking Sandbox</h2>
+          <button class="btn btn-gold" id="launchDemo">Try demo account</button>
+          <div class="dashboard-preview" id="dashboardPreview">
+            <div class="account-card"><h3>Demo Balance</h3><p id="demoBalance">$2,500,000.00</p><button class="btn btn-outline" id="withdrawBtn">Withdraw $5,000</button></div>
+            <div class="chart-box"><canvas id="spendChart" width="320" height="180" aria-label="Spending chart"></canvas></div>
+            <div class="slider-box"><label>Credit score simulator <input id="creditSlider" type="range" min="580" max="850" value="740" /></label><p id="creditOutput">740 - Excellent</p></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="stories">
+        <div class="container">
+          <h2>Member Stories</h2>
+          <div class="filters"><button data-filter="all">All</button><button data-filter="home">Home Buyers</button><button data-filter="business">Small Business Owners</button><button data-filter="retirees">Retirees</button></div>
+          <div class="masonry" id="testimonialGrid"></div>
+        </div>
+      </section>
+
+      <section class="section alt" id="education">
+        <div class="container">
+          <h2>Knowledge Center</h2>
+          <div class="edu-grid">
+            <article><h3>Mortgage Affordability</h3><p>Estimate your buying power with live rate assumptions.</p></article>
+            <article><h3>Retirement Gap Analyzer</h3><p>Model your future balance and contribution needs.</p></article>
+            <article><h3>Auto Loan Comparison</h3><p>Compare terms from 24 to 84 months instantly.</p></article>
+            <article><h3>Credit Card Payoff</h3><p>Build a payoff strategy with snowball/avalanche methods.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="rates">
+        <div class="container">
+          <h2>Live Rates & Offers</h2>
+          <div class="rate-grid">
+            <div>30Y Fixed: <strong>6.12%</strong></div><div>15Y Fixed: <strong>5.41%</strong></div><div>5/1 ARM: <strong>5.68%</strong></div><div>Savings APY: <strong>4.85%</strong></div><div>CD Special: <strong>5.10%</strong> <span id="countdown"></span></div>
+          </div>
+          <p>Competitor comparison and estimated 5-year savings are available after preference opt-in.</p>
+        </div>
+      </section>
+
+      <section class="section alt" id="integration">
+        <div class="container">
+          <h2>Enterprise Integrations</h2>
+          <p>Connected workflow modules include AI chat handoff, appointment scheduling, fraud alert streams, and external connector placeholders for <a href="https://capital.bricksgold.com/" target="_blank" rel="noreferrer">capital.bricksgold.com</a>.</p>
+          <ul>
+            <li>OAuth2/OIDC SSO ready connector points</li>
+            <li>Webhook ingestion endpoint mapping and signed event validation</li>
+            <li>User profile onboarding, MFA enrollment, biometric setup flows</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" id="faq">
+      <div class="container footer-grid">
+        <div><h3>FirstGreen</h3><p>24/7 Member Services: <a href="tel:+18005550199">1-800-555-0199</a></p><p><a href="#">Secure Message Center</a></p></div>
+        <div><h4>Products</h4><a href="#">Personal Banking</a><a href="#">Lending</a><a href="#">Business Solutions</a><a href="#">Wealth Management</a></div>
+        <div><h4>Support</h4><a href="#">Help Center</a><a href="#">Branch Locator</a><a href="#">Accessibility Services</a><a href="#">Report Lost/Stolen Card</a></div>
+        <div><h4>Legal & About</h4><a href="#">About Us</a><a href="#">Careers</a><a href="#">Press Room</a><a href="#">Privacy / Terms</a></div>
+      </div>
+      <div class="footer-bottom container"><p>Member FDIC • Equal Housing Lender • NMLS #101010</p><p>© <span id="year"></span> FirstGreen. All rights reserved.</p></div>
+    </footer>
+
+    <dialog id="accountModal">
+      <form method="dialog" class="modal-form">
+        <h3>Create Your FirstGreen Profile</h3>
+        <label>Full Name <input required /></label>
+        <label>Email <input type="email" required /></label>
+        <label>Password <input type="password" required minlength="12" /></label>
+        <label><input type="checkbox" required /> Enable MFA enrollment</label>
+        <menu><button value="cancel" class="btn btn-outline">Cancel</button><button value="success" class="btn btn-gold">Create account</button></menu>
+      </form>
+    </dialog>
+
+    <div id="toast" role="status" aria-live="polite"></div>
+    <script src="app.js" defer></script>
+  </body>
+</html>

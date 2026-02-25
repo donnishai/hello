@@ -1,0 +1,5 @@
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="FG coin logo">
+  <circle cx="24" cy="24" r="22" fill="#D4AF37" stroke="#0A192F" stroke-width="2"/>
+  <circle cx="24" cy="24" r="16" fill="#F7FAFC" opacity="0.4"/>
+  <path d="M16 15h16v4H21v5h9v4h-9v9h-5V15zm18 9c0 6-4 10-10 10h-1v-4h1c3 0 5-2 5-6s-2-6-5-6h-1v-4h1c6 0 10 4 10 10z" fill="#0A192F"/>
+</svg>
