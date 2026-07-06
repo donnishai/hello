@@ -1,0 +1,11 @@
+{
+  "name": "FirstGreen Digital Banking",
+  "short_name": "FirstGreen",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0A192F",
+  "theme_color": "#0A192F",
+  "icons": [
+    { "src": "assets/logo-fg.svg", "sizes": "48x48", "type": "image/svg+xml" }
+  ]
+}
